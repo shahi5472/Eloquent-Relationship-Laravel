@@ -46,4 +46,17 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    //Accessor Method
+    public function getNameAttribute($value)
+    {
+        return ucwords(strtolower($value));
+    }
+
+    //Mutator Method
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = ucwords(strtolower($value));
+    }
+
 }
