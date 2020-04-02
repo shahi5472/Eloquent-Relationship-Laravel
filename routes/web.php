@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 //    return view('welcome');
 
-    $user = factory(\App\User::class)->create();
-    $phone = new \App\Phone();
+//    $user = factory(\App\User::class)->create();
+//    $phone = new \App\Phone();
+//
+//    $phone->phone = "01746799842";
+//    $user->phone()->save($phone);
 
-    $phone->phone = "01746799842";
-    $user->phone()->save($phone);
+//    $user->push();//update for posts
 
 });
