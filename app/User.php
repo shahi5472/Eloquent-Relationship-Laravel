@@ -59,4 +59,9 @@ class User extends Authenticatable
         $this->attributes['name'] = ucwords(strtolower($value));
     }
 
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
 }
